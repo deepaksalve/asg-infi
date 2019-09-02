@@ -1,0 +1,93 @@
+@import './styles/config';
+
+$color-grey: #CDCDCD;
+$color-danger: #FF0000;
+
+$c-0: 0;
+$c-xs: 8px;
+$c-s: 12px;
+$c-m: 16px;
+$c-l: 24px;
+$c-xl: 32px;
+$c-xxl: 48px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-light;
+  color: $color-dark;
+}
+
+.w--full { width: 100%; }
+
+.pos--r { position: relative; }
+
+.d--ib { display: inline-block; }
+.d--b { display: block; }
+.d--i { display: inline; }
+
+.fl--r { float: right; }
+
+.mr--xl { margin-right: $c-xl; }
+
+.ml--s { margin-left: $c-s; }
+
+.mt--s { margin-top: $c-s; }
+.mt--m { margin-top: $c-m; }
+
+.p--xs { padding: $c-xs; }
+
+header {
+  @extend .w--full;
+
+  height: 40px;
+  background-color: #dcdcdc;
+}
+
+.header--item {
+  @extend .d--ib;
+  @extend .mr--xl;
+
+  height: 40px;
+  line-height: 40px;
+  padding: 4px 8px;
+
+  &.active {
+
+    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+.content {
+  margin: 16px auto;
+  width: 90%;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.error-container {
+  @extend .mt--m;
+
+  border: 1px solid red;
+
+  .error-item {
+    margin: 8px;
+  }
+}
+
+.login-form {
+  input {
+    width: 300px;
+  }
+
+  button {
+    padding: 8px;
+    font-weight: 800;
+  }
+}
